@@ -4,9 +4,10 @@ const mongoose = require('mongoose');
 const bookRoutes = require('./routes/book');
 const userRoutes = require('./routes/user');
 const path = require('path');
+require('dotenv').config();
 
 
-mongoose.connect('mongodb+srv://faedarl:Gototo65@cluster0.5bmvnpx.mongodb.net/book-rating')
+mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('Connexion à MongoDB réussie !'))
   .catch((error) => console.log('Erreur MongoDB :', error));
 
