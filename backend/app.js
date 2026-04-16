@@ -1,10 +1,11 @@
+require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose');
 const bookRoutes = require('./routes/book');
 const userRoutes = require('./routes/user');
 const path = require('path');
-require('dotenv').config();
+
 
 
 mongoose.connect(process.env.MONGO_URI)
